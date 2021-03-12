@@ -29,7 +29,7 @@ The tagset that we used is a subset of Penn treebank. Each of our annotations an
 # Common naming patterns and their definition
 The grammar patterns below represent different naming structures found in source code; they are represented by sequences of part-of-speech tags. The patterns we present were all empirically derived by looking at a sample of 1,335 identifiers and manually annotating them with part-of-speech. Refer to our paper for more information [1]. In addition, feel free to check out the dataset of 1,335 manually-tagged identifiers associated with the paper -- https://github.com/SCANL/datasets/tree/master/grammar_patterns_data.
 
-We present each pattern, a definition for the pattern, and examples of the pattern below. We will expand this as we discover more patterns through our research, so be sure to check be periodically!
+We present each pattern, a definition for the pattern, and examples of the pattern below. The \* symbol means "zero or more" while the + symbol means "one or more" of the token to the corresponding symbol's left. Just like in regular expressions. We will expand this as we discover more patterns through our research, so be sure to check be periodically.
 
 | Grammar_Pattern | Definition | Examples |
 |-|-|-|
