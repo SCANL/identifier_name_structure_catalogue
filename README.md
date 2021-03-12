@@ -31,7 +31,7 @@ The grammar patterns below represent different naming structures found in source
 
 We present each pattern, a definition for the pattern, and examples of the pattern below. We will expand this as we discover more patterns through our research, so be sure to check be periodically!
 
-| Grammar Pattern | Definition | Examples |
+| Grammar_Pattern | Definition | Examples |
 |-|-|-|
 | NM* N | Noun Phrase: One or more noun modifiers that specialize as single head-noun. The noun modifiers before the head-noun act as a way to specialize our understanding of the head-noun. The head-noun embodies the in-memory concept represented by the identifier. | label_action<br>table_index<br>read_operation |
 | V NM* N | Verb Phrase: Verb followed by a noun-phrase. These are typically either function identifiers or identifiers with a boolean type. When this represents a function name, which is what it most commonly represents, the verb is an action that is applied to the object specified by the noun-phrase that follows it. When this represents a boolean identifier, the verb is typically an existential quantifier; checking for the existence of the object specified by the noun phrase that follows the verb. | create_metadata_array<br>trim_parse_trees<br>write_tcp_data |
