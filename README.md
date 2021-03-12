@@ -1,6 +1,6 @@
 
 # Identifier Naming Structure Catalogue
-This README will catalogue common source code identifier naming structures derived from research. These will be represented as grammar patterns [1], but for simplicity sake we will refer to them as naming structures. We first describe needed [Linguistic Terminology](#linguistic-terminology) and a [Tagset](#tagset) before presenting the [Naming Structures](Common-naming-patterns-and-their-definition) themselves. If you're already familiar with these, skip down to the structures themselves!
+This README will catalogue common source code identifier naming structures derived from research. These will be represented as grammar patterns [1], but for simplicity sake we will refer to them as naming structures. We first describe needed [Linguistic Terminology](#linguistic-terminology) and a [Tagset](#tagset) before presenting the [Naming Structures](#Common-naming-patterns-and-their-definition) themselves. If you're already familiar with these, skip down to the structures themselves!
 
 # Linguistic Terminology
 First you should be familiar with two simple linguistic concepts.
