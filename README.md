@@ -83,8 +83,8 @@ We present each pattern, a definition for the pattern, and examples of the patte
        <tr><th style="text-align:center;font-weight:bold">Identifier Name</th><th style="font-weight:bold">Grammar Pattern</th></tr>
        <tr><td><pre lang="C++"> void On_Connect(); </pre></td><td style="text-align:center">P N</td></tr>
        <tr><td><pre lang="C++"> ModelSettings&amp; with_Market_Rate_Accuracy(); </pre></td><td style="text-align:center">P NM NM N</td></tr>
-       <tr><td><pre lang="C++"> btVector3 from_Local_Aabb_Min;</pre></td><td style="text-align:center">N NM NM N</td></tr>
-       <tr><td><pre lang="java"> String to_string();</pre></td><td style="text-align:center">P N</td></tr>
+       <tr><td><pre lang="java"> btVector3 from_Local_Aabb_Min;</pre></td><td style="text-align:center">N NM NM N</td></tr>
+       <tr><td><pre lang="C++"> String to_string();</pre></td><td style="text-align:center">P N</td></tr>
       </table>
     </td>
   </tr>
@@ -94,7 +94,7 @@ We present each pattern, a definition for the pattern, and examples of the patte
       <table style="margin-left:auto;margin-right:auto;">
        <tr><th style="text-align:center;font-weight:bold" colspan=2>Examples</th></tr>
        <tr><th style="text-align:center;font-weight:bold">Identifier Name</th><th style="font-weight:bold">Grammar Pattern</th></tr>
-       <tr><td><pre lang="java"> String generated_Token_On_Creation; </pre></td><td style="text-align:center">V N P N</td></tr>
+       <tr><td><pre lang="javascript"> String generated_Token_On_Creation; </pre></td><td style="text-align:center">V N P N</td></tr>
        <tr><td><pre lang="C++"> long query_Timeout_In_Milliseconds; </pre></td><td style="text-align:center">NM N P NPL</td></tr>
        <tr><td><pre lang="java"> class Scroll_Id_For_Node;</pre></td><td style="text-align:center">NM N P N</td></tr>
        <tr><td><pre lang="C++"> HttpUrl url_from_json();</pre></td><td style="text-align:center">N P N</td></tr>
@@ -109,7 +109,7 @@ We present each pattern, a definition for the pattern, and examples of the patte
        <tr><th style="text-align:center;font-weight:bold" colspan=2>Examples</th></tr>
        <tr><th style="text-align:center;font-weight:bold">Identifier Name</th><th style="font-weight:bold">Grammar Pattern</th></tr>
        <tr><td><pre lang="C++"> gboolean destroy_with_parent; </pre></td><td style="text-align:center">V N P</td></tr>
-       <tr><td><pre lang="java"> string convert_to_php_namespace(); </pre></td><td style="text-align:center">V P NM N</td></tr>
+       <tr><td><pre lang="C++"> string convert_to_php_namespace(); </pre></td><td style="text-align:center">V P NM N</td></tr>
        <tr><td><pre lang="C++"> void tessellate_To_Mesh();</pre></td><td style="text-align:center">V P N</td></tr>
        <tr><td><pre lang="C++"> void save_As_Quadratic_Png();</pre></td><td style="text-align:center">V P NM N</td></tr>
       </table>
