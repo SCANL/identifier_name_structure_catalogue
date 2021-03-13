@@ -45,9 +45,9 @@ We present each pattern, a definition for the pattern, and examples of the patte
       <table style="margin-left:auto;margin-right:auto;">
        <tr><th style="text-align:center;font-weight:bold" colspan=2>Examples</th></tr>
        <tr><th style="text-align:center;font-weight:bold">Identifier Name</th><th style="font-weight:bold">Grammar Pattern</th></tr>
-       <tr><td><pre lang="java"> GtkWidget *selection_width_label; </pre></td><td style="text-align:center">NM NM N</td></tr>
+       <tr><td><pre lang="javascript"> GtkWidget *selection_width_label; </pre></td><td style="text-align:center">NM NM N</td></tr>
        <tr><td><pre lang="C++"> int dynamic_Table_Index;</pre></td><td style="text-align:center">NM NM N</td></tr>
-       <tr><td><pre lang="java"> ReadBufferOperation *read_Operation;</pre></td><td style="text-align:center">NM N</td></tr>
+       <tr><td><pre lang="javascript"> ReadBufferOperation *read_Operation;</pre></td><td style="text-align:center">NM N</td></tr>
       </table>
     </td>
   </tr>
