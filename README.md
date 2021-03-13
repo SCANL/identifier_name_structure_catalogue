@@ -71,7 +71,7 @@ We present each pattern, a definition for the pattern, and examples of the patte
        <tr><th style="text-align:center;font-weight:bold">Identifier Name</th><th style="font-weight:bold">Grammar Pattern</th></tr>
        <tr><td><pre lang="C++"> int training_examples; </pre></td><td style="text-align:center">NM NPL</td></tr>
        <tr><td><pre lang="java"> String[] method_Name_Prefixes;</pre></td><td style="text-align:center">NM NM NPL</td></tr>
-       <tr><td><pre lang="C++"> std::vector&lt;Handle&lt;AbcdAtmVolCurve&gt;&gt; curves;</pre></td><td style="text-align:center">NPL</td></tr>
+       <tr><td><pre lang="java"> vector&lt;Handle&lt;AbcdAtmVolCurve&gt;&gt; curves;</pre></td><td style="text-align:center">NPL</td></tr>
       </table>
     </td>
   </tr>
