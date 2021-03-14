@@ -4,10 +4,12 @@ This README will catalogue common source code identifier naming structures deriv
 
 # Linguistic Terminology
 First you should be familiar with two simple linguistic concepts.
-| Linguistic-terminology |  Definition|
-|--|--|
-|Noun-adjunct   | Noun-adjuncts are compound-words; typically groups of two-or-more words separated by a dash. Compound-words start with a noun-adjunct; a noun acting as an adjective. For example, in the word employee-name, 'employee' is a noun-adjunct and 'name' is a noun (or, more specifically, a head-noun).  |
-|Head-noun|The right-most noun in a noun phrase is typically referred to as a head-noun. This noun is the word that most-closely emobodies the concept that represents the in-memory entity that the identifier is used to describe.
+| Linguistic-terminology | Definition                                                                                                                                                                                                                                                                                            |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Noun-adjunct           | Noun-adjuncts are compound-words; typically groups of two-or-more words separated by a dash. Compound-words start with a noun-adjunct; a noun acting as an adjective. For example, in the word employee-name, 'employee' is a noun-adjunct and 'name' is a noun (or, more specifically, a head-noun). |
+| Head-noun              | The right-most noun in a noun phrase is typically referred to as a head-noun. This noun is the word that most-closely emobodies the concept that represents the in-memory entity that the identifier is used to describe.                                                                             |
+| Hypernym               | A word with a broad meaning that more specific words fall under; a superordinate. For example, color is a hypernym of red. [Definition from Oxford Languages](https://languages.oup.com/google-dictionary-en/)                                                                                                                                                                         |
+| Hyponym                | a word of more specific meaning than a general or superordinate term applicable to it. For example, spoon is a hyponym of cutlery. [Definition from Oxford Languages](https://languages.oup.com/google-dictionary-en/)                                                                         |
 
 # Tagset
 The tagset that we used is a subset of Penn treebank. Each of our annotations and an example can be found below. Further examples and definitions can be found in the paper [1]
