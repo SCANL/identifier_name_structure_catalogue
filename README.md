@@ -120,7 +120,7 @@ Identifiers with a plural head-noun are somewhat more likely to have a collectio
   </tr>
   <tr>
     <td class="tg-0pky">V* DT NM* N(PL)</td>
-    <td class="tg-0pky">Noun phrase with leading determiner: The addition of a determiner tells us how much of the population, which is specified by the noun-phrase, is represented, or acted on, by the identifier. <br><br>Typically, the determiner will tell us that we are interested in ALL, ANY, ONE, A, THE, SEVERAL, etc., of the objects specified by the plural noun phrase. If there is a leading verb, the verb specifies an action to take on the population or it represents existential quantification (e.g., matchesAnyParentCategories)<br><br>These can be functions or non-function identifier names.<br>
+    <td class="tg-0pky">Noun phrase with leading determiner: The addition of a determiner tells us how much of the population, which is specified by the noun-phrase, is represented, or acted on, by the identifier. <br><br>Typically, the determiner will tell us that we are interested in ALL, ANY, ONE, A, THE, SEVERAL, etc., of the population of objects specified by the noun phrase. If there is a leading verb, the verb specifies an action to take on the population or it represents existential quantification (e.g., matchesAnyParentCategories)<br><br>These can be functions or non-function identifier names.<br>
       <table style="margin-left:auto;margin-right:auto;">
        <tr><th style="text-align:center;font-weight:bold" colspan=2>Examples</th></tr>
        <tr><th style="text-align:center;font-weight:bold">Identifier Name</th><th style="font-weight:bold">Grammar Pattern</th></tr>
