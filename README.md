@@ -56,7 +56,7 @@ We present each pattern, a definition for the pattern, and examples of the patte
     <tr>
     <td class="tg-0pky">NM* NPL</td>
     <td class="tg-0pky">Plural noun phrase: When the head-noun of a noun-phrase is plural, it is a plural noun-phrase. The plural is sometimes purposeful in that the plural head-noun expresses the multiplicity of the data that the identifier represents.<br><br>
-Identifiers with a plural head-noun are somewhat more likely to have a collection type, based on our data [1]. Some naming conventions (e.g., the Java naming standard) generally consider it good practice to match the plurality of the identifier with whether its type represents a singular, or collection, object.<br><br> These are typically non-function identifier names. <br>
+Identifiers with a plural head-noun are somewhat more likely to have a collection type [1]. Some naming conventions (e.g., the Java naming standard) generally consider it good practice to match the plurality of the identifier with whether its type represents a singular, or collection, object.<br><br> These are typically non-function identifier names. <br>
       <table style="margin-left:auto;margin-right:auto;">
        <tr><th style="text-align:center;font-weight:bold" colspan=2>Examples</th></tr>
        <tr><th style="text-align:center;font-weight:bold">Identifier Name</th><th style="font-weight:bold">Grammar Pattern</th></tr>
