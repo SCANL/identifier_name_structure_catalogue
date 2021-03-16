@@ -114,7 +114,7 @@ Identifiers with a plural head-noun are somewhat more likely to have a collectio
       <table style="margin-left:auto;margin-right:auto;">
        <tr><th style="text-align:center;font-weight:bold" colspan=2>Examples</th></tr>
        <tr><th style="text-align:center;font-weight:bold">Identifier Name</th><th style="font-weight:bold">Grammar Pattern</th></tr>
-       <tr><td><pre lang="C++"> gboolean destroy_with_parent; </pre></td><td style="text-align:center">V N P</td></tr>
+       <tr><td><pre lang="C++"> gboolean destroy_with_parent; </pre></td><td style="text-align:center">V P N</td></tr>
        <tr><td><pre lang="C++"> string convert_to_php_namespace(); </pre></td><td style="text-align:center">V P NM N</td></tr>
        <tr><td><pre lang="C++"> void tessellate_To_Mesh();</pre></td><td style="text-align:center">V P N</td></tr>
        <tr><td><pre lang="C++"> void save_As_Quadratic_Png();</pre></td><td style="text-align:center">V P NM N</td></tr>
