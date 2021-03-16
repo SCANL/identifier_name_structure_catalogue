@@ -1,6 +1,8 @@
 
 # Identifier Naming Structure Catalogue
-This README will catalogue common source code identifier naming structures derived from research. These will be represented as grammar patterns [1], but for simplicity sake we will refer to them as naming structures. We first describe needed [Linguistic Terminology](#linguistic-terminology) and a [Tagset](#tagset) before presenting the [Naming Structures](#Common-naming-patterns-and-their-definition) themselves. If you're already familiar with these, skip down to the structures themselves!
+This README will catalogue common source code identifier naming structures derived from research. These will be represented as grammar patterns [1], but for simplicity sake we will refer to them as naming structures. The goal of this document is to act as a resource for researchers, students, and developers seeking more information on identifier naming structures, their meanings, and common usage patterns. We are currently looking into other types of identifier charactheristics that should be included in this document. **This is a living document**, we will expand this as we discover more patterns and characteristics through our, and possibly others', research. Check back periodically for more information!
+
+We first describe needed [Linguistic Terminology](#linguistic-terminology) and a [Tagset](#tagset) before presenting the [Naming Structures](#Common-naming-patterns-and-their-definition) themselves. If you're already familiar with these, skip down to the structures themselves!
 
 # Linguistic Terminology
 First you should be familiar with two simple linguistic concepts.
@@ -29,9 +31,9 @@ The tagset that we used is a subset of Penn treebank. Each of our annotations an
 | PRE          | preamble (e.g., Hungarian)              | Gimp, GLEW, GL, G, p_, m_, b_                                   |
 
 # Common naming patterns and their definition
-The grammar patterns below represent different naming structures found in source code; they are represented by sequences of part-of-speech tags. The patterns we present were all empirically derived by looking at a sample of 1,335 identifiers and manually annotating them with part-of-speech. Refer to our paper for more information [1]. In addition, feel free to check out the dataset of 1,335 manually-tagged identifiers associated with the paper -- https://github.com/SCANL/datasets/tree/master/grammar_patterns_data.
+The grammar patterns below represent different naming structures found in source code; they are represented by sequences of part-of-speech tags. The patterns we present were all empirically derived by looking at a sample of 1,335 identifiers and manually annotating them with part-of-speech. Refer to the paper for more information [1]. In addition, feel free to check out the dataset of 1,335 manually-tagged identifiers associated with the paper -- https://github.com/SCANL/datasets/tree/master/grammar_patterns_data.
 
-We present each pattern, a definition for the pattern, and examples of the pattern below. The \* symbol means "zero or more" while the + symbol means "one or more" of the token to the corresponding symbol's left. Just like in regular expressions. We will expand this as we discover more patterns through our research, so be sure to check be periodically.
+We present each pattern, a definition for the pattern, and examples of the pattern below. The \* symbol means "zero or more" while the + symbol means "one or more" of the token to the corresponding symbol's left. Just like in regular expressions. 
 
 <table class="tg">
 <thead>
@@ -150,4 +152,8 @@ Identifiers with a plural head-noun are somewhat more likely to have a collectio
 1. Christian D. Newman, Reem S. AlSuhaibani, Michael J. Decker, Anthony Peruma, Dishant Kaushik, Mohamed Wiem Mkaouer, Emily Hill,
 On the generation, structure, and semantics of grammar patterns in source code identifiers, Journal of Systems and Software, 2020, 110740, ISSN 0164-1212, https://doi.org/10.1016/j.jss.2020.110740. (http://www.sciencedirect.com/science/article/pii/S0164121220301680) 
 
-Keywords: Program comprehension; Identifier naming; Software maintenance; Source code analysis; Part-of-speech tagging
+# Webpage
+This page is currently supported by [SCANL lab](https://scanl.org/). If other research labs join this effort, we will put their webpages down here as well.
+
+# Contribute
+If you are interested in correcting something in this document, make an issue! If you would like to add, or otherwise somehow contribute, please email: scanl.lab@gmail.com
