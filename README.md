@@ -5,7 +5,7 @@ This README will catalogue common source code identifier naming structures deriv
 We first describe needed [Linguistic Terminology](#linguistic-terminology) and a [Tagset](#tagset) before presenting the [Naming Structures](#Common-naming-patterns-and-their-definition) themselves. If you're already familiar with these, skip down to the structures themselves!
 
 # Linguistic Terminology
-First you should be familiar with two simple linguistic concepts.
+First you should be familiar with some simple linguistic concepts.
 | Linguistic-terminology | Definition                                                                                                                                                                                                                                                                                            |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Noun-adjunct           | Noun-adjuncts are compound-words; typically groups of two-or-more words separated by a dash. Compound-words start with a noun-adjunct; a noun acting as an adjective. For example, in the word employee-name, 'employee' is a noun-adjunct and 'name' is a noun (or, more specifically, a head-noun). |
