@@ -156,4 +156,4 @@ On the generation, structure, and semantics of grammar patterns in source code i
 This page is currently supported by [SCANL lab](https://scanl.org/). If other research labs join this effort, we will put their webpages down here as well.
 
 # Contribute
-If you are interested in correcting something in this document, make an issue! If you would like to add, or otherwise somehow contribute, please email: scanl.lab@gmail.com
+If you are interested in correcting something in this document, make an issue! If you would like to add, or otherwise somehow contribute, or if you're just interested in our research and want to ask questions, please email: scanl.lab@gmail.com
