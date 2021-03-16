@@ -89,7 +89,7 @@ Identifiers with a plural head-noun are somewhat more likely to have a collectio
        <tr><th style="text-align:center;font-weight:bold">Identifier Name</th><th style="font-weight:bold">Grammar Pattern</th></tr>
        <tr><td><pre lang="C++"> void On_Connect(); </pre></td><td style="text-align:center">P N</td></tr>
        <tr><td><pre lang="C++"> ModelSettings&amp; with_Market_Rate_Accuracy(); </pre></td><td style="text-align:center">P NM NM N</td></tr>
-       <tr><td><pre lang="java"> btVector3 from_Local_Aabb_Min;</pre></td><td style="text-align:center">N NM NM N</td></tr>
+       <tr><td><pre lang="java"> btVector3 from_Local_Aabb_Min;</pre></td><td style="text-align:center">P NM NM N</td></tr>
        <tr><td><pre lang="C++"> String to_string();</pre></td><td style="text-align:center">P N</td></tr>
       </table>
     </td>
