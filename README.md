@@ -153,7 +153,7 @@ Identifiers with a plural head-noun are somewhat more likely to have a collectio
 On the generation, structure, and semantics of grammar patterns in source code identifiers, Journal of Systems and Software, 2020, 110740, ISSN 0164-1212, https://doi.org/10.1016/j.jss.2020.110740. (http://www.sciencedirect.com/science/article/pii/S0164121220301680) 
 
 # Webpage
-This page is currently supported by [SCANL lab](www.scanl.org/). If other research labs join this effort, we will put their webpages down here as well.
+This page is currently supported by [SCANL lab](http://www.scanl.org/). If other research labs join this effort, we will put their webpages down here as well.
 
 # Contribute
 If you are interested in correcting something in this document, make an issue! If you would like to add, or otherwise somehow contribute, or if you're just interested in our research and want to ask questions, please email: scanl.lab@gmail.com
