@@ -1,20 +1,20 @@
 
 # Identifier Naming Structure Catalogue
-This README will catalogue common source code identifier naming structures derived from research. These will be represented as grammar patterns [1], but for simplicity sake we will refer to them as naming structures. The goal of this document is to act as a resource for researchers, students, and developers seeking more information on identifier naming structures, their meanings, and common usage patterns. We are currently looking into other types of identifier charactheristics that should be included in this document. **This is a living document**, we will expand this as we discover more patterns and characteristics through our, and possibly others', research. Check back periodically for more information!
+This README will catalogue common source code identifier naming structures derived from research. These will be represented as grammar patterns [1], but for simplicity sake we will refer to them as naming structures. The goal of this document is to act as a resource for researchers, students, and developers seeking more information on identifier naming structures, their meanings, and common usage patterns. We are currently looking into other types of identifier characteristics that should be included in this document. **This is a living document**, we will expand this as we discover more patterns and characteristics through our, and possibly others', research. Check back periodically for more information!
 
-We first describe needed [Linguistic Terminology](#linguistic-terminology) and a [Tagset](#tagset) before presenting the [Naming Structures](#Common-naming-patterns-and-their-definition) themselves. If you're already familiar with these, skip down to the structures themselves!
+We first describe needed [Linguistic Terminology](#linguistic-terminology) and a part-of-speech [Tagset](#tagset) before presenting the [Naming Structures](#Common-naming-patterns-and-their-definition) themselves. If you're already familiar with these, skip down to the structures themselves.
 
 # Linguistic Terminology
 First you should be familiar with some simple linguistic concepts.
 | Linguistic-terminology | Definition                                                                                                                                                                                                                                                                                            |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Noun-adjunct           | Noun-adjuncts are defined as a noun acting (i.e., being used as) as an adjective. These are found in certain types of compound-words which, in English, are often groups of two-or-more words separated by a dash. For example, in the word employee-name, 'employee' is a noun-adjunct and 'name' is a noun (or, more specifically, a head-noun). |
-| Head-noun              | The right-most noun in a noun phrase is typically referred to as a head-noun. This noun is the word that most-closely emobodies the concept that represents the in-memory entity that the identifier is used to describe.                                                                             |
+| Head-noun              | The right-most noun in a noun phrase is typically referred to as a head-noun. This noun is the word that most-closely embodies the concept that represents the in-memory entity that the identifier is used to describe.|
+| Noun-adjunct           | Noun-adjuncts are defined as a noun acting as (i.e., being used as) an adjective. These are found in certain types of compound-words which, in English, are often groups of two-or-more words separated by a dash. For example, in the word employee-name, 'employee' is a noun-adjunct and 'name' is a noun (or, more specifically, a head-noun). |
 | Hypernym               | A word with a broad meaning that more specific words fall under; a superordinate. For example, color is a hypernym of red. [Definition from Oxford Languages](https://languages.oup.com/google-dictionary-en/)                                                                                                                                                                         |
 | Hyponym                | a word of more specific meaning than a general or superordinate term applicable to it. For example, spoon is a hyponym of cutlery. [Definition from Oxford Languages](https://languages.oup.com/google-dictionary-en/)                                                                         |
 
 # Tagset
-The tagset that we used is a subset of Penn treebank. Each of our annotations and an example can be found below. Further examples and definitions can be found in the paper [1]
+The tagset that we use is a subset of Penn treebank. Each of our annotations and an example can be found below. Further examples and definitions can be found in the paper [1]
 
 | Abbreviation | Expanded Form                           | Examples                                                        |
 |--------------|-----------------------------------------|-----------------------------------------------------------------|
@@ -22,10 +22,10 @@ The tagset that we used is a subset of Penn treebank. Each of our annotations an
 | DT           | determiner                              | the, this, that, these, those, which                            |
 | CJ           | conjunction                             | and, for, nor, but, or, yet, so                                 |
 | P            | preposition                             | behind, in front of, at, under, beside, above, beneath, despite |
-| NPL          | noun plural                             | Streets, cities, cars, people, lists, items, elements.          |
+| NPL          | noun plural                             | streets, cities, cars, people, lists, items, elements.          |
 | NM           | noun modifier (adjective, noun-adjunct) | red, cold, hot, scary, beautiful, happy, faster, small          |
-| V            | verb                                    | Run, jump, drive, spin                                          |
-| VM           | verb modifier (adverb)                  | Very, loudly, seriously,impatiently, badly                      |
+| V            | verb                                    | run, jump, drive, spin                                          |
+| VM           | verb modifier (adverb)                  | very, loudly, seriously, impatiently, badly                      |
 | PR           | pronoun                                 | she, he, her, him, it, we, us, they, them, I, me, you           |
 | D            | digit                                   | 1, 2, 10, 4.12, 0xAF                                            |
 | PRE          | preamble (e.g., Hungarian)              | Gimp, GLEW, GL, G, p_, m_, b_                                   |
