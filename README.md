@@ -70,7 +70,7 @@ Some naming conventions (e.g., the Java naming standard) generally consider it g
   </tr>
   <tr>
     <td class="tg-0pky">V NM* N(PL)</td>
-    <td class="tg-0pky"><b>Verb Phrase</b>: The addition of a verb to a noun phrase creates a verb phrase. A verb phrase is typically active in that verb is an action being applied to, or with, the concept embodied by the noun phrase that follows it. In some cases, instead of being an action, the verb is an existential quantifier.<br><br>Identifiers with this pattern are typically either function identifiers or identifiers with a boolean type.<br>
+    <td class="tg-0pky"><b>Verb Phrase</b>: The addition of a verb to a noun phrase creates a verb phrase. The verb in a verb phrase is an action being applied to (or with) the concept embodied by the noun phrase that follows. In some cases, instead of being an action, the verb is an existential quantifier.<br><br>Identifiers with this pattern are typically either function identifiers or identifiers with a boolean type.<br>
       <table style="margin-left:auto;margin-right:auto;">
        <tr><th style="text-align:center;font-weight:bold" colspan=2>Examples</th></tr>
        <tr><th style="text-align:center;font-weight:bold">Identifier Name</th><th style="font-weight:bold">Grammar Pattern</th></tr>
