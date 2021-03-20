@@ -45,7 +45,7 @@ We present each pattern, a definition for the pattern, and examples of the patte
 <tbody>
   <tr>
     <td class="tg-0pky">NM* N</td>
-    <td class="tg-0pky"><b>Noun Phrase</b>: Zero or more noun-modifiers appear to the left of a head-noun. Noun-modifiers that appear before the head-noun act as a way to specialize our understanding of the head-noun by taking the general concept the head-noun represents and reducing it to a more concise, specific concept. For example, in the identifier 'issueDescription' the head-noun is 'Description', which is the general concept. The noun-adjunct, 'issue', specializes our understanding of the description by specifying what kind of 'description' we are talking about. <br><br>This is the most common naming pattern for non-function identifiers. It is good practice to be careful in the choice, and number, of noun-modifiers to use before the head-noun. A good identifier will include only enough noun-modifiers to concisely define the concept represented by the head-noun.<br><br> Here are some typical non-function identifier names following the pattern.<br>
+    <td class="tg-0pky"><b>Noun Phrase</b>: Zero or more noun-modifiers appear to the left of a head-noun. Noun-modifiers that appear before the head-noun act as a way to specialize our understanding of the head-noun by taking the general concept the head-noun represents and reducing it to a more concise, specific concept. For example, in the identifier 'issueDescription' the head-noun is 'Description', which is the general concept. The noun-adjunct, 'issue', specializes our understanding of the description by specifying what kind of 'description' we are talking about. <br><br>This is the most common naming pattern for non-function identifiers. It is good practice to be careful in the choice, and number, of noun-modifiers to use before the head-noun. A good identifier will include only enough noun-modifiers to concisely define the concept represented by the head-noun.<br><br> These are typically non-function identifier names.  Here are examples following the pattern:<br>
       <table style="margin-left:auto;margin-right:auto;">
        <tr><th style="text-align:center;font-weight:bold" colspan=2>Examples</th></tr>
        <tr><th style="text-align:center;font-weight:bold">Identifier Name</th><th style="font-weight:bold">Grammar Pattern</th></tr>
@@ -58,7 +58,7 @@ We present each pattern, a definition for the pattern, and examples of the patte
     <tr>
     <td class="tg-0pky">NM* NPL</td>
     <td class="tg-0pky"><b>Plural noun phrase</b>: This is identical to <I>NM* N</I>, except the head noun is plural.  The plural is often purposeful in that the plural head-noun expresses the multiplicity of the data that the identifier represents and it likely has a collection type [1].<br><br>
-Some naming conventions (e.g., the Java naming standard) generally consider it good practice to match the plurality of the identifier with whether its type represents a singular or collection, object.<br><br> Here are some typical non-function identifier names following the pattern. <br>
+Some naming conventions (e.g., the Java naming standard) generally consider it good practice to match the plurality of the identifier with whether its type represents a singular or collection, object.<br><br> These are typically non-function identifier names.  Here are examples following the pattern:<br>
       <table style="margin-left:auto;margin-right:auto;">
        <tr><th style="text-align:center;font-weight:bold" colspan=2>Examples</th></tr>
        <tr><th style="text-align:center;font-weight:bold">Identifier Name</th><th style="font-weight:bold">Grammar Pattern</th></tr>
@@ -70,7 +70,7 @@ Some naming conventions (e.g., the Java naming standard) generally consider it g
   </tr>
   <tr>
     <td class="tg-0pky">V NM* N(PL)</td>
-    <td class="tg-0pky"><b>Verb Phrase</b>: The addition of a verb to a noun phrase creates a verb phrase. The verb in a verb phrase is an action being applied to (or with) the concept embodied by the noun phrase that follows. In some cases, instead of being an action, the verb is an existential quantifier.<br><br>Identifiers with this pattern are typically either function identifiers or identifiers with a boolean type.<br>
+    <td class="tg-0pky"><b>Verb Phrase</b>: The addition of a verb to a noun phrase creates a verb phrase. The verb in a verb phrase is an action being applied to (or with) the concept embodied by the noun phrase that follows. In some cases, instead of being an action, the verb is an existential quantifier.<br><br>These are typically either function identifiers or identifiers with a boolean type. Here are examples following the pattern:<br>
       <table style="margin-left:auto;margin-right:auto;">
        <tr><th style="text-align:center;font-weight:bold" colspan=2>Examples</th></tr>
        <tr><th style="text-align:center;font-weight:bold">Identifier Name</th><th style="font-weight:bold">Grammar Pattern</th></tr>
