@@ -31,9 +31,9 @@ The tagset that we use is a subset of Penn treebank. Each of our annotations and
 | PRE          | preamble (e.g., Hungarian)              | Gimp, GLEW, GL, G, p_, m_, b_                                   |
 
 # Common naming patterns and their definition
-The grammar patterns below represent different naming structures found in source code; they are represented by sequences of part-of-speech tags. The patterns we present were all empirically derived by looking at a sample of 1,335 identifiers and manually annotating them with part-of-speech. Refer to the paper for more information [1]. In addition, feel free to check out the dataset of 1,335 manually-tagged identifiers associated with the paper -- https://github.com/SCANL/datasets/tree/master/grammar_patterns_data.
+The grammar patterns below represent different naming structures found in source code; they are represented by sequences of part-of-speech tags. The patterns we present are all empirically derived from a manually-tagged sample of 1,335 identifiers. Refer to the paper [1] for more information. The manually tagged  dataset is freely available [here](https://github.com/SCANL/datasets/tree/master/grammar_patterns_data).
 
-We present each pattern, a definition for the pattern, and examples of the pattern below. The \* symbol means "zero or more" while the + symbol means "one or more" of the token to the corresponding symbol's left. Just like in regular expressions. 
+We present each pattern, a definition for the pattern, and examples of the pattern below. We use regular expression synax, where the \* symbol means "zero or more" while the + symbol means "one or more" of the token.
 
 <table class="tg">
 <thead>
