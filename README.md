@@ -57,7 +57,7 @@ We present each pattern, a definition for the pattern, and examples of the patte
   </tr>
     <tr>
     <td class="tg-0pky">NM* NPL</td>
-    <td class="tg-0pky"><b>Plural noun phrase</b>: This is identical to *NM\* N*, except the head noun is plural.  The plural is often purposeful in that the plural head-noun expresses the multiplicity of the data that the identifier represents and it likely has a collection type [1].<br><br>
+    <td class="tg-0pky"><b>Plural noun phrase</b>: This is identical to <I>NM* N</I>, except the head noun is plural.  The plural is often purposeful in that the plural head-noun expresses the multiplicity of the data that the identifier represents and it likely has a collection type [1].<br><br>
 Some naming conventions (e.g., the Java naming standard) generally consider it good practice to match the plurality of the identifier with whether its type represents a singular or collection, object.<br><br> Here are some typical non-function identifier names following the pattern. <br>
       <table style="margin-left:auto;margin-right:auto;">
        <tr><th style="text-align:center;font-weight:bold" colspan=2>Examples</th></tr>
