@@ -1,8 +1,15 @@
 
 # Identifier Naming Structure Catalogue
-This README will catalogue common source code identifier naming structures derived from research. These will be represented as grammar patterns [1], but for simplicity sake we will refer to them as naming structures. The goal of this document is to act as a resource for researchers, students, and developers seeking more information on identifier naming structures, their meanings, and common usage patterns. We are currently looking into other types of identifier characteristics that should be included in this document. **This is a living document**, we will expand this as we discover more patterns and characteristics through our, and possibly others', research. Check back periodically for more information!
+This README will catalogue common source code identifier naming structures, best practices, and semantics derived from research. The goal of this document is to act as a resource for researchers, students, and developers that want to learn about what is scientifically known about naming identifiers. We are currently looking into other types of identifier characteristics that should be included in this document. **This is a living document**, we will expand this as we discover more patterns and characteristics through our, and possibly others', research. Check back periodically for more information!
 
-We first describe needed [Linguistic Terminology](#linguistic-terminology) and a part-of-speech [Tagset](#tagset) before presenting the [Naming Structures](#Common-naming-patterns-and-their-definition) themselves. If you're already familiar with these, skip down to the structures themselves.
+This document is broken down into the following sections:
+1. Section 1 describes the needed [Linguistic Terminology](#linguistic-terminology) which is used in various parts of the document
+
+2. Section 2 describe the part-of-speech [Tagset](#tagset) used throughout the document
+
+3. Section 3 presents common [Naming Structures](#Common-naming-patterns-and-their-definition) found by analyzing source code identifiers using grammar patterns. This section contains a list of common identifier naming structures and a definition/example for each.
+
+4. Section 4 presents [Linguistic Antipatterns](#Linguistic-Antipatterns), which are recurring, detrimental practices in the naming, documentation, and/or choice of identifier. In this section we provide the antipattern name, a definition, an example, and several options for resolving the antipattern.
 
 # Linguistic Terminology
 First you should be familiar with some simple linguistic concepts.
