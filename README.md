@@ -147,11 +147,13 @@ Some naming conventions (e.g., the Java naming standard) generally consider it g
 </tbody>
 </table>
 
+# Linguistic Antipatterns
+Linguistic Antipatterns (LAs) in software systems are recurring, detrimental practices in the naming, documentation, and/or choice of identifier in the implementation of an entity; thus impairing program understanding [2]. They typically take the form of an identifier name that incorrectly describes the behavior of the entity that it represents OR an entity that betrays the behavior conveyed linguistically by its corresponding identifier.
 <table>
 <thead>
   <tr>
     <th>Name</th>
-    <th>Definition</th>
+    <th>Definition and Example</th>
   </tr>
 </thead>
 <tbody>
@@ -243,6 +245,8 @@ Some naming conventions (e.g., the Java naming standard) generally consider it g
 
 1. Christian D. Newman, Reem S. AlSuhaibani, Michael J. Decker, Anthony Peruma, Dishant Kaushik, Mohamed Wiem Mkaouer, Emily Hill,
 On the generation, structure, and semantics of grammar patterns in source code identifiers, Journal of Systems and Software, 2020, 110740, ISSN 0164-1212, https://doi.org/10.1016/j.jss.2020.110740. (http://www.sciencedirect.com/science/article/pii/S0164121220301680) 
+
+2. Arnaoudova, V., Di Penta, M. & Antoniol, G. Linguistic antipatterns: what they are and how developers perceive them. Empir Software Eng 21, 104–158 (2016). https://doi.org/10.1007/s10664-014-9350-8
 
 # Webpage
 This page is currently supported by [SCANL lab](http://www.scanl.org/). If other research labs join this effort, we will put their webpages down here as well.
