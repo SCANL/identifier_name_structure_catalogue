@@ -240,55 +240,234 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Not implemented condition</td>
-    <td>The comments of a method suggest a conditional behavior that is not implemented in the code. When the implementation is default this should be documented</td>
+    <td>The comments of a method suggest a conditional behavior that is not implemented in the code. When the implementation is default this should be documented
+      <pre lang="Java">
+        /**
+        * Returns the children of this object. When this object is
+        * displayed in a tree, the returned objects will be this
+        * element's children. Returns an empty array if this object
+        * has no children.
+        *
+        * @param object The object to get the children for.
+        */
+        public Object[] getChildren(final Object o) {
+          return new Object[0];
+        }
+      </pre>
+      How to resolve:
+      <ol>
+        <li>Complete implementation of the method</li>
+        <li>Document (i.e., update the comment) that the method is incomplete and does not implement the behavior indicated in its comment</li>
+      </ol>
+    </td>
   </tr>
   <tr>
     <td>Validation method does not confirm</td>
-    <td>A validation method (e.g., name starting with "validate", "check", "ensure") does not confirm the validation, i.e., the method neither provides a return value informing whether the validation was successful, nor documents how to proceed to understand</td>
+    <td>A validation method (e.g., name starting with "validate", "check", "ensure") does not confirm the validation, i.e., the method neither provides a return value informing whether the validation was successful, nor documents how to proceed to understand
+      <pre lang="Java">
+        public void checkCollision(final String before,
+                                   final String after) {
+          final boolean collision = before != null
+              && before.equals(this._shortName) || after != null
+              && after.equals(this._shortName);
+          if (collision) {
+            if (this._longName == null) {
+              this._longName = this.getLongName();
+            }
+            this. _displayName = this._longName;
+          }
+        }
+      </pre>
+      How to resolve:
+      <ol>
+        <li>Change method to return confirmation (i.e., true or false)</li>
+        <li>Consider changing the name to avoid implication of validation behavior (i.e., avoid terms like check and is)</li>
+        <li>If the previous options are not available then thoroughly document method behavior, consider highlighting irregular validation behavior</li>
+      </ol>
+    </td>
   </tr>
   <tr>
     <td>Get method does not return</td>
-    <td>The name suggests that the method returns something (e.g., name starts with "get" or "return") but the return type is void. The documentation should explain where the resulting data is stored and how to obtain it</td>
+    <td>The name suggests that the method returns something (e.g., name starts with "get" or "return") but the return type is void. The documentation should explain where the resulting data is stored and how to obtain it
+    <pre lang="Java">
+      protected void getMethodBodies(
+        final CompilationUnitDeclaration unit,
+        final int place) {
+          //[Removed some code for conciseness]
+          this.parser.scanner
+            .setSourceBuffer(
+              unit.compilationResult.compilationUnit
+              .getContents());
+          if (unit.types != null) {
+            for (int i = unit.types.length; --i >= 0;) {
+              unit.types[i].parseMethod(this.parser, unit);
+            }
+          }
+      }
+    </pre>
+      How to resolve:
+      <ol>
+        <li>Change method to return correct entity.</li>
+        <li>Consider changing the name to avoid the word <i>get</i></li>
+        <li>If the previous options are not available then thoroughly document method behavior, consider highlighting irregular getter behavior</li> 
+      </ol>
+    </td>
   </tr>
   <tr>
     <td>Not answered question</td>
-    <td>The name of a method is in the form of predicate whereas the return type is not Boolean. Example: method isValid with return type void</td>
+    <td>The name of a method is in the form of predicate whereas the return type is not Boolean. Example: method isValid with return type void
+      <pre lang="Java">
+        public void isValid(final Object[] selection,
+                            final StatusInfo res) {
+          // only single selection
+          if (selection.length == 1
+              && selection[0] instanceof IFile) { 
+              res.setOK();
+          } else {
+              res.setError(""); //$NON-NLS-1$
+          }
+        }
+      </pre>
+      <ol>
+        <li>Change method to return correct entity.</li>
+        <li>Consider changing the name to avoid the word <i>get</i></li>
+        <li>If the previous options are not available then thoroughly document method behavior, consider highlighting irregular getter behavior</li> 
+      </ol>
+    </td>
   </tr>
   <tr>
     <td>Transform method does not return</td>
-    <td>The name of a method suggests the transformation of an object but there is no return value and it is not clear from the documentation where the result is stored. Example: method javaToNative with return type void</td>
+    <td>The name of a method suggests the transformation of an object but there is no return value and it is not clear from the documentation where the result is stored. Example: method javaToNative with return type void
+      <pre lang="Java">
+        public void javaToNative(final Object object,
+                                 final TransferData transferData) {
+          final byte[] check =
+              LocalSelectionTransfer.TYPE_NAME.getBytes();
+          super.javaToNative(check, transferData);
+        }
+      </pre>
+      <ol>
+        <li>Change method to return correct entity.</li>
+        <li>If the previous option is not available then thoroughly document method behavior, consider highlighting irregular transformation behavior</li> 
+      </ol>
+    </td>
   </tr>
   <tr>
     <td>Expecting but not getting a collection</td>
-    <td>The name of a method suggests that a collection should be returned but a single object or nothing is returned. Example: method getStats with return type Boolean</td>
+    <td>The name of a method suggests that a collection should be returned but a single object or nothing is returned. Example: method getStats with return type Boolean
+      <pre lang="Java">
+        public boolean getStats() {
+          return SAXParserBase._stats;
+        }
+      </pre>
+      <ol>
+        <li>Change the name of the method (and any related identifier names) so that it is singular instead of plural</li>
+      </ol>
+    </td>
   </tr>
   <tr>
     <td>Method name and return type are opposite</td>
-    <td>The intent of the method suggested by its name is in contradiction with what it returns. Example: method disable with return type ControlEnableState. The inconsistency comes from "disable" and "enable" having opposite meanings</td>
+    <td>The intent of the method suggested by its name is in contradiction with what it returns. Example: method disable with return type ControlEnableState. The inconsistency comes from "disable" and "enable" having opposite meanings
+      <pre lang="Java">
+        public static ControlEnableState disable(Control w) {
+          return new ControlEnableState(w);
+        }
+      </pre>
+      <ol>
+        <li>Change method name so that it aligns better with the return type (i.e., change <i>disable</i> to <i>enable</i>)</li>
+        <li>Change type name to align better with method name (i.e., to ControlDisableState)</li>
+      </ol>
+    </td>
   </tr>
   <tr>
     <td>Method signature and comment are opposite</td>
-    <td>The documentation of a method is in contradiction with its declaration. Example: method isNavigateForwardEnabled is in contradiction with its comment documenting "a back navigation", as "forward" and "back" are antonyms</td>
+    <td>The documentation of a method is in contradiction with its declaration. Example: method isNavigateForwardEnabled is in contradiction with its comment documenting "a back navigation", as "forward" and "back" are antonyms
+      <pre lang="Java">
+        /**
+        *	Returns true if this listener has a target for a
+        *	back navigation. Only one listener needs to return
+        *	true for the back button to be enabled.
+        */
+        public boolean isNavigateForwardEnabled() {
+          boolean enabled = false;
+          if (this._isForwardEnabled == 1) { 
+            enabled = true;
+          } else {
+            if (this._isForwardEnabled != 0) { enabled =
+              this.navigateForward(false) != null;
+            }
+          }
+          return enabled;
+        }
+      </pre>
+      <ol>
+        <li>Change the comment to specify that this method is for forward navigation</li>
+      </ol>
+    </td>
   </tr>
   <tr>
     <td>Says one but contains many</td>
-    <td>The name of an attribute suggests a single instance, while its type suggests that the attribute stores a collection of objects. Example: attribute target of type Vector. It is unclear whether a change aects one or multiple instances in the collection</td>
+    <td>The name of an attribute suggests a single instance, while its type suggests that the attribute stores a collection of objects. Example: attribute target of type Vector. It is unclear whether a change aects one or multiple instances in the collection
+      <pre lang="Java">
+        Vector _target;
+      </pre>
+      <ol>
+        <li>Change the identifier name to reflect plurality of its type (i.e., <i>_target</i> -> <i>_targets</i>)</li>
+      </ol>
+    </td>
   </tr>
   <tr>
     <td>Name suggests boolean but type is not</td>
-    <td>The name of an attribute suggests that its value is true or false, but its declaring type is not Boolean. Example: attribute isReached of type int[] where the declared type and values are not documented</td>
+    <td>The name of an attribute suggests that its value is true or false, but its declaring type is not Boolean. Example: attribute isReached of type int[] where the declared type and values are not documented
+      <pre lang="Java">
+        int[] isReached;
+      </pre>
+      <ol>
+        <li>Change the name of the identifier to be more descriptive with respect to what kind of array it represents.</li>
+        <li>Consider removing the word <i>is</i> and using a different term unless the array represents a sequence of appropriate (i.e., boolean-like) values</li>
+        <li>If appropriate, consider using a boolean array</li>
+        <li>Carefully document the data represented by the array, including the reasoning for its integer type and whether different integer values have different meanings</li> 
+      </ol>
+    </td>
   </tr>
   <tr>
     <td>Says many but contains one</td>
-    <td>The name of an attribute suggests multiple instances, but its type suggests a single one. Example: attribute stats of type Boolean. Documenting such inconsistencies avoids additional comprehension effort to understand the purpose of the attribute</td>
+    <td>The name of an attribute suggests multiple instances, but its type suggests a single one. Example: attribute stats of type Boolean. Documenting such inconsistencies avoids additional comprehension effort to understand the purpose of the attribute
+      <pre lang="Java">
+        private static boolean _stats = true;
+      </pre>
+      <ol>
+        <li>Change identifier name to singular instead of plural</li>
+      </ol>
+    </td>
   </tr>
   <tr>
     <td>Attribute name and type are opposite</td>
-    <td>The name of an attribute is in contradiction with its type as they contain antonyms. Example: attribute start of type MAssociationEnd. The use of antonyms can induce wrong assumptions</td>
+    <td>The name of an attribute is in contradiction with its type as they contain antonyms. Example: attribute start of type MAssociationEnd. The use of antonyms can induce wrong assumptions
+      <pre lang="Java">
+        MAssociationEnd start = null;
+      </pre>
+      <ol>
+        <li>Change identifier name to align with type name (i.e., change <i>start</i> to <i>end</i>).</li>
+      </ol>
+    </td>
   </tr>
   <tr>
     <td>Attribute signature and comment are opposite</td>
-    <td>The declaration of an attribute is in contradiction with its documentation. Example: attribute INCLUDE NAME DEFAULT whose comment documents an \exclude pattern". Whether the pattern is included or excluded is thus unclear</td>
+    <td>The declaration of an attribute is in contradiction with its documentation. Example: attribute INCLUDE NAME DEFAULT whose comment documents an "exclude pattern". Whether the pattern is included or excluded is thus unclear
+      <pre lang="Java">
+        /**
+        *	Configuration default exclude pattern,
+        *	ie .*\/@href|.*\/@action|frame/@src
+        */
+        public final static String INCLUDE_NAME_DEFAULT
+          = ".*/@href=|.*/@action=|frame/@src=";
+      </pre>
+      <ol>
+        <li>Change identifier name to align with comment (i.e., <i>include</i> -> <i>exclude</i>)</li>
+        <li>Change comment to align with method name (i.e., <i>exclude</i> -> <i>include</i>)</li>
+      </ol>
+    </td>
   </tr>
 </tbody>
 </table>
