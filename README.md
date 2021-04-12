@@ -176,15 +176,67 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Is returns more than a Boolean</td>
-    <td>The name of a method is a predicate suggesting a true/false value in return. However the return type is not Boolean but rather a more complex type thus allowing a wider range of values without documenting them. Example: <code>isValid</code> with return type <code>int</code></td>
+    <td>The name of a method is a predicate suggesting a true/false value in return. However the return type is not Boolean but rather a more complex type thus allowing a wider range of values without documenting them. Example: <code>isValid</code> with return type <code>int</code> <br/>
+      <pre lang="Java">
+        public int isValid(){
+            final long currentTime = System.currentTimeMillis();
+            if (currentTime <= this.expires) {
+              // The delay has not passed yet -
+              // assuming source is valid.
+              return SourceValidity.VALID;
+            }
+          // The delay has passed, prepare for the next interval.
+          this.expires = currentTime + this.delay;
+          return this.delegate.isValid();
+        }
+      </pre>
+      How to resolve:
+      <ol>
+        <li>The type should be changed to boolean to reflect the function's behavior as a binary predicate.</li>
+        <li>Consider changing the name such that it does not imply a yes/no question and provides some indication of n-ary return values.
+        <li>Carfully document the meaning of each value that can be returned. Thoroughly test each value.</li>
+      </ol>
+    </td>
   </tr>
   <tr>
     <td>Set method returns</td>
-    <td>A set method having a return type different than void and not documenting the return type/values with an appropriate comment</td>
+    <td>A set method having a return type different than void without proper documentation of the return type/values
+    <pre lang="Java">
+      public Dimension setBreadth(final Dimension target, final int source) {
+        if (this.orientation == Orientation.VERTICAL) {
+          return new Dimension(source, (int) target.getHeight());
+        } else {
+          return new Dimension((int) target.getWidth(), source);
+        }
+      }
+    </pre>
+      How to resolve:
+      <ol>
+        <li>Since the word <i>set</i>, when used in this manner, has a specific definition in the programming domain, consider using a different term, such as <i>change</i>.</li>
+        <li>Correct the implementation such that it works like a stereotypical set method (i.e., void return, mutates a class attribute)</li>
+        <li>Carefully document the reasoning behind using <i>set</i> while also returning a value</li>
+      </ol>
+    </td>
+
   </tr>
   <tr>
     <td>Expecting but not getting single instance</td>
-    <td>The name of a method indicates that a single object is returned but the return type is a collection. Example: method getExpansion returning List</td>
+    <td>The name of a method indicates that a single object is returned but the return type is a collection. Example: method getExpansion, which ends with a head-noun that is <i>singular</i>, and returns a List object.
+      <pre lang="Java">
+        /**
+          * Returns the expansion state for a tree.
+          *
+          * @return the expansion state for a tree
+        */
+        public List getExpansion() {
+          return this.fExpansion;
+        }
+      </pre>
+      How to resolve:
+      <ol>
+        <li>Correct the method name so that it is plural-- <code>getExpansions()</code></li>
+      </ol>
+    </td>
   </tr>
   <tr>
     <td>Not implemented condition</td>
