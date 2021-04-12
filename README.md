@@ -147,6 +147,98 @@ Some naming conventions (e.g., the Java naming standard) generally consider it g
 </tbody>
 </table>
 
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Definition</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Get more than accessor</td>
+    <td>A getter that performs actions other than returning the corresponding attribute. Example: method <code>getImageData</code> which always returns a new object.<br/>
+      <pre lang="C++">
+        ImageData getImageData(){
+          final Point size = this.getSize();
+          this.imageData = new ImageData(size.x, size.y, 8);
+          return this.imageData;
+        }
+      </pre>
+      How to resolve: 
+      <ol>
+      <li>The method name should change so that it is not a getter or</li>
+      <li>the implementation should be corrected to conform to standard get-method behavior</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <td>Is returns more than a Boolean</td>
+    <td>The name of a method is a predicate suggesting a true/false value in return. However the return type is not Boolean but rather a more complex type thus allowing a wider range of values without documenting them. Example: <code>isValid</code> with return type <code>int</code></td>
+  </tr>
+  <tr>
+    <td>Set method returns</td>
+    <td>A set method having a return type different than void and not documenting the return type/values with an appropriate comment</td>
+  </tr>
+  <tr>
+    <td>Expecting but not getting single instance</td>
+    <td>The name of a method indicates that a single object is returned but the return type is a collection. Example: method getExpansion returning List</td>
+  </tr>
+  <tr>
+    <td>Not implemented condition</td>
+    <td>The comments of a method suggest a conditional behavior that is not implemented in the code. When the implementation is default this should be documented</td>
+  </tr>
+  <tr>
+    <td>Validation method does not confirm</td>
+    <td>A validation method (e.g., name starting with "validate", "check", "ensure") does not confirm the validation, i.e., the method neither provides a return value informing whether the validation was successful, nor documents how to proceed to understand</td>
+  </tr>
+  <tr>
+    <td>Get method does not return</td>
+    <td>The name suggests that the method returns something (e.g., name starts with "get" or "return") but the return type is void. The documentation should explain where the resulting data is stored and how to obtain it</td>
+  </tr>
+  <tr>
+    <td>Not answered question</td>
+    <td>The name of a method is in the form of predicate whereas the return type is not Boolean. Example: method isValid with return type void</td>
+  </tr>
+  <tr>
+    <td>Transform method does not return</td>
+    <td>The name of a method suggests the transformation of an object but there is no return value and it is not clear from the documentation where the result is stored. Example: method javaToNative with return type void</td>
+  </tr>
+  <tr>
+    <td>Expecting but not getting a collection</td>
+    <td>The name of a method suggests that a collection should be returned but a single object or nothing is returned. Example: method getStats with return type Boolean</td>
+  </tr>
+  <tr>
+    <td>Method name and return type are opposite</td>
+    <td>The intent of the method suggested by its name is in contradiction with what it returns. Example: method disable with return type ControlEnableState. The inconsistency comes from "disable" and "enable" having opposite meanings</td>
+  </tr>
+  <tr>
+    <td>Method signature and comment are opposite</td>
+    <td>The documentation of a method is in contradiction with its declaration. Example: method isNavigateForwardEnabled is in contradiction with its comment documenting "a back navigation", as "forward" and "back" are antonyms</td>
+  </tr>
+  <tr>
+    <td>Says one but contains many</td>
+    <td>The name of an attribute suggests a single instance, while its type suggests that the attribute stores a collection of objects. Example: attribute target of type Vector. It is unclear whether a change aects one or multiple instances in the collection</td>
+  </tr>
+  <tr>
+    <td>Name suggests boolean but type is not</td>
+    <td>The name of an attribute suggests that its value is true or false, but its declaring type is not Boolean. Example: attribute isReached of type int[] where the declared type and values are not documented</td>
+  </tr>
+  <tr>
+    <td>Says many but contains one</td>
+    <td>The name of an attribute suggests multiple instances, but its type suggests a single one. Example: attribute stats of type Boolean. Documenting such inconsistencies avoids additional comprehension effort to understand the purpose of the attribute</td>
+  </tr>
+  <tr>
+    <td>Attribute name and type are opposite</td>
+    <td>The name of an attribute is in contradiction with its type as they contain antonyms. Example: attribute start of type MAssociationEnd. The use of antonyms can induce wrong assumptions</td>
+  </tr>
+  <tr>
+    <td>Attribute signature and comment are opposite</td>
+    <td>The declaration of an attribute is in contradiction with its documentation. Example: attribute INCLUDE NAME DEFAULT whose comment documents an \exclude pattern". Whether the pattern is included or excluded is thus unclear</td>
+  </tr>
+</tbody>
+</table>
+
 # References
 
 1. Christian D. Newman, Reem S. AlSuhaibani, Michael J. Decker, Anthony Peruma, Dishant Kaushik, Mohamed Wiem Mkaouer, Emily Hill,
