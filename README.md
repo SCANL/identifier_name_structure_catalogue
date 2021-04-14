@@ -152,6 +152,9 @@ Some naming conventions (e.g., the Java naming standard) generally consider it g
 1. Christian D. Newman, Reem S. AlSuhaibani, Michael J. Decker, Anthony Peruma, Dishant Kaushik, Mohamed Wiem Mkaouer, Emily Hill,
 On the generation, structure, and semantics of grammar patterns in source code identifiers, Journal of Systems and Software, 2020, 110740, ISSN 0164-1212, https://doi.org/10.1016/j.jss.2020.110740. (http://www.sciencedirect.com/science/article/pii/S0164121220301680) 
 
+# Acknowledgements
+This material is based upon work supported by the National Science Foundation under Grant No. 1850412.
+
 # Webpage
 This page is currently supported by [SCANL lab](http://www.scanl.org/). If other research labs join this effort, we will put their webpages down here as well.
 
