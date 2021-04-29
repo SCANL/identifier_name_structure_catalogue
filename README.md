@@ -166,7 +166,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
 <tbody>
   <tr>
     <td>Get more than accessor</td>
-    <td>A getter that performs actions other than returning the corresponding attribute. Example: method <code>getImageData</code> which always returns a new object.<br/>
+    <td>A getter that performs actions other than returning the corresponding attribute. Example: method <code>getImageData</code> which always returns a <code>new object</code>.<br/>
       <pre lang="C++">
         ImageData getImageData(){
           final Point size = this.getSize();
@@ -183,7 +183,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Is returns more than a Boolean</td>
-    <td>The name of a method is a predicate suggesting a true/false value in return. However the return type is not Boolean but rather a more complex type thus allowing a wider range of values without documenting them. Example: <code>isValid</code> with return type <code>int</code> <br/>
+    <td>The name of a method is a predicate suggesting a true/false value in return. However the return type is not Boolean but rather a more complex type thus allowing a wider range of values without documenting them. Example: method <code>isValid</code> with return type <code>int</code>.<br/>
       <pre lang="Java">
         public int isValid(){
             final long currentTime = System.currentTimeMillis();
@@ -207,7 +207,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Set method returns</td>
-    <td>A set method having a return type different than void without proper documentation of the return type/values
+    <td>A set method having a return type different than void without proper documentation of the return type/values. Example: method <code>setBreadth</code> has a non-<code>void</code> return type.
     <pre lang="Java">
       public Dimension setBreadth(final Dimension target, final int source) {
         if (this.orientation == Orientation.VERTICAL) {
@@ -219,7 +219,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
     </pre>
       How to resolve:
       <ol>
-        <li>Since the word <i>set</i>, when used in this manner, has a specific definition in the programming domain, consider using a different term, such as <i>change</i>.</li>
+        <li>The word <i>set</i>, when used in this manner, has a specific definition in the programming domain. Consider using a different term, such as <i>change</i>.</li>
         <li>Correct the implementation such that it works like a stereotypical set method (i.e., void return, mutates a class attribute)</li>
         <li>Carefully document the reasoning behind using <i>set</i> while also returning a value</li>
       </ol>
@@ -228,7 +228,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Expecting but not getting single instance</td>
-    <td>The name of a method indicates that a single object is returned but the return type is a collection. Example: method getExpansion, which ends with a head-noun that is <i>singular</i>, and returns a List object.
+    <td>The name of a method indicates that a single object is returned but the return type is a collection. Example: method <code>getExpansion</code>, which ends with a head-noun that is <i>singular</i>, but returns a <code>List</code> object.
       <pre lang="Java">
         /**
           * Returns the expansion state for a tree.
@@ -247,7 +247,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Not implemented condition</td>
-    <td>The comments of a method suggest a conditional behavior that is not implemented in the code. When the implementation is default this should be documented
+    <td>The comments of a method suggest a conditional behavior that is not implemented in the code. When the implementation is default this should be documented. Example: method <code>getChildren</code> has a comment which indicates there should be a conditional within its body.
       <pre lang="Java">
         /**
         * Returns the children of this object. When this object is
@@ -270,7 +270,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Validation method does not confirm</td>
-    <td>A validation method (e.g., name starting with "validate", "check", "ensure") does not confirm the validation, i.e., the method neither provides a return value informing whether the validation was successful, nor documents how to proceed to understand
+    <td>A validation method (e.g., name starting with "validate", "check", "ensure") does not confirm the validation, i.e., the method neither provides a return value informing whether the validation was successful, nor documents how to proceed to understand. Example: method <code>checkCollision</code> returns <code>void</code> despite indicating that it is designed to perform validation.
       <pre lang="Java">
         public void checkCollision(final String before,
                                    final String after) {
@@ -295,7 +295,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Get method does not return</td>
-    <td>The name suggests that the method returns something (e.g., name starts with "get" or "return") but the return type is void. The documentation should explain where the resulting data is stored and how to obtain it
+    <td>The name suggests that the method returns something (e.g., name starts with "get" or "return") but the return type is void. The documentation should explain where the resulting data is stored and how to obtain it. Example: method <code>getMethodBodies</code> has a <code>void</code> return type but its name indicates that it is a getter method.
     <pre lang="Java">
       protected void getMethodBodies(
         final CompilationUnitDeclaration unit,
@@ -322,7 +322,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Not answered question</td>
-    <td>The name of a method is in the form of predicate whereas the return type is not Boolean. Example: method isValid with return type void
+    <td>The name of a method is in the form of predicate whereas the return type is not Boolean. Example: method <code>isValid</code> with a <code>void</code> return type.
       <pre lang="Java">
         public void isValid(final Object[] selection,
                             final StatusInfo res) {
@@ -344,7 +344,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Transform method does not return</td>
-    <td>The name of a method suggests the transformation of an object but there is no return value and it is not clear from the documentation where the result is stored. Example: method javaToNative with return type void
+    <td>The name of a method suggests the transformation of an object but there is no return value and it is not clear from the documentation where the result is stored. Example: method <code>javaToNative</code> has a <code>void</code> return type but indicates that it performs a transformation (i.e., type conversion).
       <pre lang="Java">
         public void javaToNative(final Object object,
                                  final TransferData transferData) {
@@ -361,7 +361,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Expecting but not getting a collection</td>
-    <td>The name of a method suggests that a collection should be returned but a single object or nothing is returned. Example: method getStats with return type Boolean
+    <td>The name of a method suggests that a collection should be returned but a single object or nothing is returned. Example: method <code>getStats</code> with a <code>Boolean</code> return type; making it difficult to understand the reason behind the plurality of the method name.
       <pre lang="Java">
         public boolean getStats() {
           return SAXParserBase._stats;
@@ -374,7 +374,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Method name and return type are opposite</td>
-    <td>The intent of the method suggested by its name is in contradiction with what it returns. Example: method disable with return type ControlEnableState. The inconsistency comes from "disable" and "enable" having opposite meanings
+    <td>The intent of the method suggested by its name is in contradiction with what it returns. Example: method <code>disable</code> with return type <code>ControlEnableState</code>. The words "disable" and "enable" having opposite meanings.
       <pre lang="Java">
         public static ControlEnableState disable(Control w) {
           return new ControlEnableState(w);
@@ -388,7 +388,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Method signature and comment are opposite</td>
-    <td>The documentation of a method is in contradiction with its declaration. Example: method isNavigateForwardEnabled is in contradiction with its comment documenting "a back navigation", as "forward" and "back" are antonyms
+    <td>The documentation of a method is in contradiction with its declaration. Example: method <code>isNavigateForwardEnabled</code> is in contradiction with its comment documenting "a back navigation", as "forward" and "back" are antonyms
       <pre lang="Java">
         /**
         *	Returns true if this listener has a target for a
@@ -414,7 +414,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Says one but contains many</td>
-    <td>The name of an attribute suggests a single instance, while its type suggests that the attribute stores a collection of objects. Example: attribute target of type Vector. It is unclear whether a change aects one or multiple instances in the collection
+    <td>The name of an attribute suggests a single instance, while its type suggests that the attribute stores a collection of objects. Example: attribute <code>_target</code> that is of type <code>Vector</code>. It is unclear whether a change aspects one or multiple instances in the collection.
       <pre lang="Java">
         Vector _target;
       </pre>
@@ -425,7 +425,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Name suggests boolean but type is not</td>
-    <td>The name of an attribute suggests that its value is true or false, but its declaring type is not Boolean. Example: attribute isReached of type int[] where the declared type and values are not documented
+    <td>The name of an attribute suggests that its value is true or false, but its declaring type is not Boolean. Example: attribute <code>isReached</code> that is of type <code>int[]</code> where the declared type and values are not documented.
       <pre lang="Java">
         int[] isReached;
       </pre>
@@ -439,7 +439,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Says many but contains one</td>
-    <td>The name of an attribute suggests multiple instances, but its type suggests a single one. Example: attribute stats of type Boolean. Documenting such inconsistencies avoids additional comprehension effort to understand the purpose of the attribute
+    <td>The name of an attribute suggests multiple instances, but its type suggests a single one. Example: attribute <code>stats</code> that is of type <code>Boolean</code>. Documenting such inconsistencies avoids additional comprehension effort to understand the purpose of the attribute.
       <pre lang="Java">
         private static boolean _stats = true;
       </pre>
@@ -450,7 +450,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Attribute name and type are opposite</td>
-    <td>The name of an attribute is in contradiction with its type as they contain antonyms. Example: attribute start of type MAssociationEnd. The use of antonyms can induce wrong assumptions
+    <td>The name of an attribute is in contradiction with its type as they contain antonyms. Example: attribute <code>start</code> that is of type <code>MAssociationEnd</code>. The use of antonyms can induce wrong assumptions.
       <pre lang="Java">
         MAssociationEnd start = null;
       </pre>
@@ -461,7 +461,7 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
   </tr>
   <tr>
     <td>Attribute signature and comment are opposite</td>
-    <td>The declaration of an attribute is in contradiction with its documentation. Example: attribute INCLUDE NAME DEFAULT whose comment documents an "exclude pattern". Whether the pattern is included or excluded is thus unclear
+    <td>The declaration of an attribute is in contradiction with its documentation. Example: attribute <code>INCLUDE_NAME_DEFAULT</code> whose comment documents an "exclude pattern". Whether the pattern is included or excluded is thus unclear.
       <pre lang="Java">
         /**
         *	Configuration default exclude pattern,
