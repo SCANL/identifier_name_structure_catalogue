@@ -488,7 +488,7 @@ On the generation, structure, and semantics of grammar patterns in source code i
 2. Arnaoudova, V., Di Penta, M. & Antoniol, G. Linguistic antipatterns: what they are and how developers perceive them. Empir Software Eng 21, 104–158 (2016). https://doi.org/10.1007/s10664-014-9350-8
 
 # Acknowledgements
-This material is based upon work supported by the National Science Foundation under Grant No. 1850412.
+This material is based in part upon work supported by the National Science Foundation under Grant No. 1850412.
 
 # Webpage
 This page is currently supported by [SCANL lab](http://www.scanl.org/). If other research labs join this effort, we will put their webpages down here as well.
