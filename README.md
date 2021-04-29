@@ -31,7 +31,7 @@ The tagset that we use is a subset of Penn treebank. Each of our annotations and
 | P            | preposition                             | behind, in front of, at, under, beside, above, beneath, despite |
 | NPL          | noun plural                             | streets, cities, cars, people, lists, items, elements.          |
 | NM           | noun modifier (adjective)               | red, cold, hot, scary, beautiful, happy, faster, small          |
-| NM           | noun modifier (noun-adjunct in *italics*) | employee*Name*, file*Path*, font*Size*, user*Id*              |
+| NM           | noun modifier (noun-adjunct *italicized*) | *employee*Name, *file*Path, *font*Size, *user*Id              |
 | V            | verb                                    | run, jump, drive, spin                                          |
 | VM           | verb modifier (adverb)                  | very, loudly, seriously, impatiently, badly                     |
 | PR           | pronoun                                 | she, he, her, him, it, we, us, they, them, I, me, you           |
