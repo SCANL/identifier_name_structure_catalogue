@@ -3,13 +3,15 @@
 This README will catalogue common source code identifier naming structures, best practices, and semantics derived from research. The goal of this document is to act as a resource for researchers, students, and developers that want to learn about what is scientifically known about naming identifiers. We are currently looking into other types of identifier characteristics that should be included in this document. **This is a living document**, we will expand this as we discover more patterns and characteristics through our, and possibly others', research. Check back periodically for more information!
 
 This document is broken down into the following sections:
-1. Section 1 describes the needed [Linguistic Terminology](#linguistic-terminology) which is used in various parts of the document
+- [Linguistic Terminology](#linguistic-terminology) used throughout the document.
 
-2. Section 2 describe the part-of-speech [Tagset](#tagset) used throughout the document
+- [Part-of-speech Tagset](#tagset) used throughout the document.
 
-3. Section 3 presents common [Naming Structures](#Common-naming-patterns-and-their-definition) found by analyzing source code identifiers using grammar patterns. This section contains a list of common identifier naming structures and a definition/example for each.
+- [Common Naming Structures](#Common-naming-patterns-and-their-definition) derived by analyzing identifier names and deriving part-of-speech sequences called grammar patterns. This section discusses common identifier naming patterns and their meaning.
 
-4. Section 4 presents [Linguistic Antipatterns](#Linguistic-Antipatterns), which are recurring, detrimental practices in the naming, documentation, and/or choice of identifier. In this section we provide the antipattern name, a definition, an example, and several options for resolving the antipattern.
+- [Linguistic Antipatterns](#Linguistic-Antipatterns), which are recurring, detrimental practices in the naming, documentation, and/or choice of identifier. In this section we provide the antipattern name, a definition, an example, and several options for resolving the antipattern.
+
+- [Naming Styles](#Naming-Styles), which are practices that dictate how identifiers should be lexically formed. The three most common naming styles: camelCase, under_score, and PascalCase are pivotal to developer comprehension.
 
 # Linguistic Terminology
 First you should be familiar with some simple linguistic concepts.
@@ -160,8 +162,8 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
 <table>
 <thead>
   <tr>
-    <th>Name</th>
-    <th>Definition and Example</th>
+    <th><b>Name</b></th>
+    <th><b>Definition and Example</b></th>
   </tr>
 </thead>
 <tbody>
@@ -480,12 +482,57 @@ Linguistic Antipatterns (LAs) in software systems are recurring, detrimental pra
 </tbody>
 </table>
 
+# Naming Styles
+Naming style concerns the lexical structure of an identifier name. The three most common naming styles are camelCase, under_score, and PascalCase. Prior research [3] found that camelCase and under_score do not significantly differ in terms of improving or degrading the comprehension abilities of developers as long as the developer had training or experience using the given style. It is worth noting that this same paper found that camelCase has a slight edge in terms of comprehension for shorter identifier names. This observation is supported by [4] and [5]. The importance of naming style was further emphasized in a study of developer opinions on identifier naming practices [6].
+
+Because there has been no data to suggest that one naming style is better than the others, it is most important that development projects pick a naming style and remain consistent in the usage of that naming style throughout the code.
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky"><b>Naming Style</b></th>
+    <th class="tg-0pky"><b>Definition</b></th>
+    <th class="tg-0pky"><b>Example</b></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">camelCase</td>
+    <td class="tg-0pky">The first letter of each word in an identifier, except the first word, is capitalized</td>
+    <td class="tg-0pky"><code>getFullName()</code></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">under_score</td>
+    <td class="tg-0pky">An under_score is placed between each word in the identifier</td>
+    <td class="tg-0pky"><code>call_with_default()</code></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">PascalCase</td>
+    <td class="tg-0pky">The first letter of each word in an identifier, including the first word, is capitalized.</td>
+    <td class="tg-0pky"><code>NewObject()</code></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">kebab-case</td>
+    <td class="tg-0pky">This is a variant of under_score, used in languages that allow dashes (-) in identifier names, such as Lisp and Forth</td>
+    <td class="tg-0pky"><code>employee-name</code></td>
+  </tr>
+</tbody>
+</table>
+
 # References
 
 1. Christian D. Newman, Reem S. Alsuhaibani, Michael J. Decker, Anthony Peruma, Dishant Kaushik, Mohamed Wiem Mkaouer, Emily Hill,
 On the generation, structure, and semantics of grammar patterns in source code identifiers, Journal of Systems and Software, 2020, 110740, ISSN 0164-1212, https://doi.org/10.1016/j.jss.2020.110740. (http://www.sciencedirect.com/science/article/pii/S0164121220301680) 
 
-2. Arnaoudova, V., Di Penta, M. & Antoniol, G. Linguistic antipatterns: what they are and how developers perceive them. Empir Software Eng 21, 104–158 (2016). https://doi.org/10.1007/s10664-014-9350-8
+2. Arnaoudova, V., Di Penta, M. & Antoniol, G. Linguistic antipatterns: what they are and how developers perceive them. Empir Software Eng., Vol 21, 104–158 (2016). https://doi.org/10.1007/s10664-014-9350-8
+
+3. Binkley, D., Davis, M., Lawrie, D. et al. The impact of identifier style on effort and comprehension. Empir Software Eng 18, 219–276 (2013). https://doi.org/10.1007/s10664-012-9201-4
+
+4. D. Binkley, M. Davis, D. Lawrie and C. Morrell, "To camelcase or under_score," 2009 IEEE 17th International Conference on Program Comprehension, 2009, pp. 158-167, doi: https://doi.org/10.1109/ICPC.2009.5090039.
+
+5. B. Sharif and J. I. Maletic, "An Eye Tracking Study on camelCase and under_score Identifier Styles," 2010 IEEE 18th International Conference on Program Comprehension, 2010, pp. 196-205, doi: https://doi.org/10.1109/ICPC.2010.41.
+
+6. R. S. Alsuhaibani, C. D. Newman, M. J. Decker, M. L. Collard and J. I. Maletic, "On the Naming of Methods: A Survey of Professional Developers," 2021 IEEE/ACM 43rd International Conference on Software Engineering (ICSE), 2021, pp. 587-599, doi: https://doi.org/10.1109/ICSE43902.2021.00061.
 
 # Acknowledgements
 This material is based in part upon work supported by the National Science Foundation under Grant No. 1850412.
