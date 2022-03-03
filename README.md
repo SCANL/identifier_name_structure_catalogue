@@ -79,7 +79,7 @@ Some naming conventions (e.g., the Java naming standard) generally consider it g
     </td>
   </tr>
   <tr>
-    <td class="tg-0pky">V NM* N(PL)</td>
+    <td class="tg-0pky">V NM* (N|NPL)</td>
     <td class="tg-0pky"><b>Verb Phrase</b>: The addition of a verb to a noun phrase creates a verb phrase. The verb in a verb phrase is an action being applied to (or with) the concept embodied by the noun phrase that follows. In some cases, instead of being an action, the verb is an existential quantifier.<br><br>These are typically either function identifiers or identifiers with a boolean type. Here are examples following the pattern:<br>
       <table style="margin-left:auto;margin-right:auto;">
        <tr><th style="text-align:center;font-weight:bold" colspan=2>Examples</th></tr>
@@ -92,7 +92,7 @@ Some naming conventions (e.g., the Java naming standard) generally consider it g
   </tr>
 
   <tr>
-    <td class="tg-0pky">P NM* N(PL)</td>
+    <td class="tg-0pky">P NM* (N|NPL)</td>
     <td class="tg-0pky"><b>Prepositonal phrase pattern</b>: A noun or verb-phrase with a leading preposition is a prepositional phrase. The preposition in a prepositional phrase typically explains how the entity (or entities) represented by the accompanying noun or verb-phrase are related in terms of order, space, time (e.g., <I>on_enter</I>), ownership, causality, or representation (e.g., <I>to_string</I>). In the case of this specific grammar pattern, there is oftentimes an un-specified verb on the left-hand-side of the preposition. <br><br>The un-specified verb is usually an action such as the following: <I>GET</I>, <I>CONVERT</I> (e.g., to string), <I>EXECUTE</I> (e.g., on enter) or some other action. Developers understand the implied action because of experience or domain knowledge, for example, understanding event-driven functions beginning with the preposition 'on'. There may also be noun-phrase to the left of the preposition. We discuss these in another grammar pattern below.<br><br> These can be functions or non-function identifier names. Here are examples following the pattern:<br>
       <table style="margin-left:auto;margin-right:auto;">
        <tr><th style="text-align:center;font-weight:bold" colspan=2>Examples</th></tr>
@@ -105,7 +105,7 @@ Some naming conventions (e.g., the Java naming standard) generally consider it g
     </td>
   </tr>
   <tr>
-    <td class="tg-0pky">NM* N P NM* N(PL)</td>
+    <td class="tg-0pky">NM* N P NM* (N|NPL)</td>
     <td class="tg-0pky"><b>Prepositional phrase with leading noun phrase</b>: Sometimes a noun phrase is explicitly present on both the left and right of the preposition. When the left-hand-side noun-phrase is specified, there is an explicit relationship between the left- and right-hand side noun-phrases. This relationship is expressed through the preposition. The preposition helps us understand how the entity (or entities) represented by both noun-phrases are related in terms of order, space, time (e.g., <I>generated_token_on_creation</I>), ownership (e.g., <I>scroll_id_for_node</I>), causality, or representation (e.g., <I>url_from_json</I>, <I>query_timeout_in_milliseconds</I>).<br><br> These can be functions or non-function identifier names. Here are examples following the pattern:<br>
       <table style="margin-left:auto;margin-right:auto;">
        <tr><th style="text-align:center;font-weight:bold" colspan=2>Examples</th></tr>
@@ -119,7 +119,7 @@ Some naming conventions (e.g., the Java naming standard) generally consider it g
     
   </tr>
   <tr>
-    <td class="tg-0pky">V P NM* N(PL)</td>
+    <td class="tg-0pky">V P NM* (N|NPL)</td>
     <td class="tg-0pky"><b>Prepositional phrase with leading verb</b>: Same as prepositional phrase pattern but the leading verb, or verb phrase, is specified. As before, the preposition helps us understand how the entity (or entities) represented by the verb- and noun-phrases are related in terms of order, space, time, ownership, causality (e.g., <I>destroy_with_parent</I>), or representation (e.g., <I>save_as_quadratic_png</I>, <I>tessellate_to_mesh</I>, <I>convert_to_php_namespace</I>).<br><br> The usage of this pattern is similar to when the verb is implicit. There may still be an implicit noun phrase to the right of the verb and to the left of the preposition.<br><br> These can be functions or non-function identifier names. Here are examples following the pattern:<br>
       <table style="margin-left:auto;margin-right:auto;">
        <tr><th style="text-align:center;font-weight:bold" colspan=2>Examples</th></tr>
@@ -131,7 +131,7 @@ Some naming conventions (e.g., the Java naming standard) generally consider it g
       </table>
   </tr>
   <tr>
-    <td class="tg-0pky">V* DT NM* N(PL)</td>
+    <td class="tg-0pky">V* DT NM* (N|NPL)</td>
     <td class="tg-0pky"><b>Noun phrase with leading determiner</b>: The addition of a determiner tells us how much of the population, which is specified by the noun-phrase, is represented, or acted on, by the identifier. <br><br>Typically, the determiner will tell us that we are interested in <I>ALL</I>, <I>ANY</I>, <I>ONE</I>, <I>A</I>, <I>THE</I>, <I>SEVERAL</I>, etc., of the population of objects specified by the noun phrase. If there is a leading verb, the verb specifies an action to take on the population or it represents existential quantification (e.g., <I>matchesAnyParentCategories</I>)<br><br>These can be functions or non-function identifier names. Here are examples following the pattern:<br>
       <table style="margin-left:auto;margin-right:auto;">
        <tr><th style="text-align:center;font-weight:bold" colspan=2>Examples</th></tr>
